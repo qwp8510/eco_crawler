@@ -84,15 +84,3 @@ class CathaylifeFundCrawler():
             logger.error('net_worth fail with {}'.format(err))
         finally:
             return net_worth
-
-def main():
-    crawler = CathaylifeFundCrawler.instance(
-        'https://fund.cathaylife.com.tw/w/wb/wb01.djhtm?a=alb58-abu033')
-    logger.info(crawler.net_worth)
-
-
-if __name__ == '__main__':
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)-15s:%(levelname)s:%(name)s:%(message)s')
-    main()
